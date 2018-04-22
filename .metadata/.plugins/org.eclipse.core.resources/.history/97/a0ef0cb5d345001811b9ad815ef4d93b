@@ -15,7 +15,7 @@
 		</tr>
 		<tr>
 			<td>
-				<p>AGE : <input type="number" th:field="*{age}"/></p>
+				<p>AGE : <input type="number" th:field="*{age}"/>Name has errors</p>
 				<p th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age has errors</p>
 			</td>
 		</tr>

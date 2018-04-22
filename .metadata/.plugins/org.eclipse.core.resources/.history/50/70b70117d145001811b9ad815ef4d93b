@@ -22,12 +22,12 @@ public class ValidationFormController {
 	public static final String FORM_VIEW = "formvalidation";
 	public static final String RESULT_VIEW = "result";
 
-	//#2 Redireccionar a la vista que tiene el formulario
-		@GetMapping("/")
-		public RedirectView redirect() {
-			return new RedirectView("/validation/showform");
-		}
-		
+	// #1 Redireccionar a la vista que tiene el formulario
+
+	@GetMapping("/")
+	public String redirect() {
+		return "redirect:/validation/showform";
+	}
 
 	@GetMapping("/showform")
 	public String showForm(Model model) {
