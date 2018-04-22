@@ -1,0 +1,9 @@
+package com.udemy.component;
+
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+@Component("requestTimeInterceptor")
+public class RequestTimeInterceptor extends HandlerInterceptorAdapter {
+
+}

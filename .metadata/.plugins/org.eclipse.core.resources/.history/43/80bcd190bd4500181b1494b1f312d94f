@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Form - Example Post</title>
+</head>
+<body>
+	<form action="#" th:action="@{/validationform/addperson}" th:object="${person}" method="post">
+	<table>
+		<tr>
+			<td>
+				<p>NAME: <input size="30" type="text" th:field="*{name}"/></p>
+				<p th:if="${#fields.hasErrors('name)}" th:errors=*{name}>Name has errors</p>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<p>AGE : <input size="30" type="number" th:field="*{age}"/>Name has errors</p>
+				<p th:if="${#fields.hasErrors('age)}" th:errors=*{age}">Age has errors</p>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<p><input type="submit" value="Submit"/></p>
+			</td>
+		</tr>
+		
+		
+	</table>	
+		
+		
+		
+	</form>
+</body>
+</html>

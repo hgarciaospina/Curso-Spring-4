@@ -1,0 +1,7 @@
+package com.udemy.service;
+
+public interface ExampleService {
+	
+	public abstract List<Person> getLostPeople();
+
+}
