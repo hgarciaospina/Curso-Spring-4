@@ -13,8 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import com.udemy.model.Person;
-
-@SuppressWarnings("unused")
 @Controller
 @RequestMapping("/validation")
 public class ValidationFormController {
