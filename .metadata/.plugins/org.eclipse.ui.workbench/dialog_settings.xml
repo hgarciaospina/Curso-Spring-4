@@ -10,8 +10,8 @@
 		<item value="org.eclipse.pde.ui.sampleEditor" key="EditorSelectionDialog.STORE_ID_DESCR"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="-1" key="dialogHeight"/>
-		<item value="-1" key="dialogWidth"/>
+		<item value="244" key="dialogHeight"/>
+		<item value="344" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">

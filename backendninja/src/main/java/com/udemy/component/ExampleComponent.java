@@ -2,9 +2,12 @@ package com.udemy.component;
 
 import org.apache.commons.logging.Log;
 import org.apache.juli.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.udemy.controller.PostController;
+import com.udemy.repository.CourseJpaRepository;
 
 @SuppressWarnings("unused")
 @Component("exampleComponent")
@@ -12,7 +15,12 @@ public class ExampleComponent {
 	
 	private static final org.apache.juli.logging.Log LOG = LogFactory.getLog(ExampleComponent.class);
 	
+	@Autowired
+	@Qualifier("courseJpaRepository")
+	private CourseJpaRepository courseJpaRepository;
+	
 	public void sayHello() {
+		
 		LOG.info("HELLO FROM EXAMPLECOMPONENT");
 		
 	}
