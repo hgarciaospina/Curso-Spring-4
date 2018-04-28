@@ -3,14 +3,16 @@ package com.udemy.component;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.juli.logging.LogFactory;
+import org.apache.commons.logging.LogFactory; 
+import org.apache.commons.logging.Log;
+
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 @Component("requestTimeInterceptor")
 public class RequestTimeInterceptor extends HandlerInterceptorAdapter {
 	
-	private static final org.apache.juli.logging.Log LOG = LogFactory.getLog(RequestTimeInterceptor.class);
+	private static final Log LOGGER =  LogFactory.getLog(RequestTimeInterceptor.class);
 
 	
 	//Se ejecuta primero
@@ -26,7 +28,7 @@ public class RequestTimeInterceptor extends HandlerInterceptorAdapter {
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
 			throws Exception {
 		long starTime = (long) request.getAttribute("startTime");
-		LOG.info("--REQUEST URL: '" + request.getRequestURL().toString() + "' -- TOTALTIME: '" + (System.currentTimeMillis() - starTime) + "'ms");
+		LOGGER.info("Url to: '" + request.getRequestURL().toString() + "'in: '" + (System.currentTimeMillis() - starTime) + "'ms");
 		
 	}
 
