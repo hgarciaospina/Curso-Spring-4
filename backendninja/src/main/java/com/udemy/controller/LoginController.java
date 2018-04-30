@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.udemy.constant.ViewConstant;
 import com.udemy.model.UserCredential;
 
 @Controller
@@ -33,7 +34,7 @@ public class LoginController {
 		model.addAttribute("logout", logout);
 		model.addAttribute("userCredential", new UserCredential());
 		LOGGER.info("Return to login view");
-		return "login";
+		return ViewConstant.LOGIN;
 		
 	}
 	
@@ -43,7 +44,7 @@ public class LoginController {
 		
 		if (userCredential.getUsername().equals("user") && userCredential.getPassword().equals("user")) {
 				LOGGER.info("Return to contacts view");
-				return "contacts";
+				return ViewConstant.CONTACTS;
 		}
 		LOGGER.info("Redirect to login?error");
 		return "redirect:/login?error";
