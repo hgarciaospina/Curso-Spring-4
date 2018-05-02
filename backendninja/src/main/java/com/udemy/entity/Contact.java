@@ -25,7 +25,7 @@ public class Contact {
 	private String city;
 
 	public String getFirstname() {
-		return getFirstname();
+		return firstname;
 	}
 
 	public void setFirstname(String firstname) {

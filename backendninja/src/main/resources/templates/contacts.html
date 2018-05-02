@@ -73,6 +73,7 @@
 		</div>
 		
 		<div th:if = "${ result == 1}" class="alert alert-success" role="alert">Added successfully! </div>
+		<div th:if = "${ result == 0}" class="alert alert-danger" role="alert">Error adding contact! </div>
 		  
 		<a href="#" th:href="@{/contacts/contactform}">
 		
