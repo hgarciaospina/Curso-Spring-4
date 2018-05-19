@@ -5,6 +5,7 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -23,7 +24,7 @@ public class User {
 	@Column(name = "enabled", nullable = false)
 	private boolean enabled;
 	
-	@OneToMany
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
 	private Set<UserRole> userRole = new HashSet<UserRole>();
 
 	public String getUsername() {
