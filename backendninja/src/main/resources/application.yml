@@ -10,3 +10,5 @@
           naming:
             physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         database-platform: org.hibernate.dialect.MySQL5Dialect
+      thymeleaf:
+        cache: false

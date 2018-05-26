@@ -36,7 +36,7 @@ public class ContactController {
 
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@GetMapping("/contactform")
-	private String redirectContactForm(@RequestParam(name="id", required=false) int id,
+	public String redirectContactForm(@RequestParam(name="id", required=false) int id,
 			Model model) {
 		ContactModel contact = new ContactModel();
 		if(id != 0) {
