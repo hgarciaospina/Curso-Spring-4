@@ -48,5 +48,3 @@ public class UserService implements UserDetailsService {
     
     
 }
-
-//crea una nueva vista, que solo OK un hola mundo, y en el controlador le creas su metodo get ire a atender algo. ahora regreso
