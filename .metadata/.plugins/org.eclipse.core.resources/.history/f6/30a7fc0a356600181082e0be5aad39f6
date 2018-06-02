@@ -1,3 +1,4 @@
+2009
 package com.udemy.entity;
 
 import java.util.Date;
@@ -14,7 +15,7 @@ import javax.persistence.Id;
 public class Log {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", updatable = false, nullable = false)
 	private int id;
 	 

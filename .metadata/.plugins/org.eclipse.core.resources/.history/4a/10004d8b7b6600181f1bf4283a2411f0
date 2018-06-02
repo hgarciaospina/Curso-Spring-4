@@ -27,9 +27,6 @@ public class UserService implements UserDetailsService {
     @Qualifier("userRepository")
     private UserRepository userRepository; 
  
-    /* (non-Javadoc)
-     * @see org.springframework.security.core.userdetails.UserDetailsService#loadUserByUsername(java.lang.String)
-     */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         com.udemy.entity.User user = userRepository.findByUsername(username); 
