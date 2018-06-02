@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.udemy.constant.ViewConstant;
-import com.udemy.entity.User;
 import com.udemy.model.ContactModel;
 import com.udemy.service.ContactService;
 
